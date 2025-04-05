@@ -1,3 +1,4 @@
-data
-
 venv
+.idea
+output
+elliptic_bitcoin_dataset
