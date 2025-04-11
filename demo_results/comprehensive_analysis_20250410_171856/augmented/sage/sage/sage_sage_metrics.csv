@@ -1,2 +1,0 @@
-Model,Test Accuracy,Validation Accuracy,Training Time (s),Final Training Loss,Number of Epochs
-sage_sage,0.9704,0.9727,76.34,0.0489,200
