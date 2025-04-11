@@ -1,0 +1,2 @@
+Model,Test Accuracy,Validation Accuracy,Training Time (s),Final Training Loss,Number of Epochs
+label_propagation_sage,0.9652,0.9637,75.30,0.1096,200

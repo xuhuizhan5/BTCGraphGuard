@@ -1,0 +1,9 @@
+,Model,Test Accuracy,Validation Accuracy,Training Time (s),Final Training Loss,Number of Epochs
+base_gat,base_gat,0.9216,0.9212,426.71,0.2723,200
+base_sage,base_sage,0.9740,0.9770,76.91,0.0904,200
+label_propagation_gat,label_propagation_gat,0.9066,0.9117,419.75,0.2386,200
+label_propagation_sage,label_propagation_sage,0.9652,0.9637,75.30,0.1096,200
+gat_gat,gat_gat,0.9182,0.9064,422.02,0.1818,200
+gat_sage,gat_sage,0.9704,0.9738,76.13,0.0469,200
+sage_gat,sage_gat,0.9160,0.9091,428.04,0.1879,200
+sage_sage,sage_sage,0.9704,0.9727,76.34,0.0489,200

@@ -1,0 +1,9 @@
+model,test_accuracy,training_time,consistency_score
+base_gat,0.9216,426.71,1.0
+base_sage,0.974,76.91,1.0
+label_propagation_gat,0.9066,419.75,1.0
+label_propagation_sage,0.9652,75.3,1.0
+gat_gat,0.9182,422.02,1.0
+gat_sage,0.9704,76.13,1.0
+sage_gat,0.916,428.04,1.0
+sage_sage,0.9704,76.34,1.0

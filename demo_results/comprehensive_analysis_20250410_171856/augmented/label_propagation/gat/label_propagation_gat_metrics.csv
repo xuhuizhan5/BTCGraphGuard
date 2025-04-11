@@ -1,0 +1,2 @@
+Model,Test Accuracy,Validation Accuracy,Training Time (s),Final Training Loss,Number of Epochs
+label_propagation_gat,0.9066,0.9117,419.75,0.2386,200
