@@ -3,3 +3,4 @@ venv
 output
 data
 elliptic_bitcoin_dataset
+*.pkl
