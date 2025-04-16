@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{booktabs} % For professional tables
+\usepackage[table,xcdraw]{xcolor} % For cell colors
+
+\begin{document}
+
+% Command to highlight the best result
+\newcommand{\best}[1]{\cellcolor{gray!30}\textbf{#1}}
+
+\begin{table}[ht]
+\centering
+\caption{Model Performance: Train, Val, Test}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{Final Training Loss $\downarrow$} & \textbf{Validation Accuracy $\uparrow$} & \textbf{Test Accuracy $\uparrow$} \\
+\midrule
+base\_gat & 0.272 & 0.921 & 0.921 \\
+base\_sage & 0.090 & \best{0.977} & \best{0.974} \\
+label\_propagation\_gat & 0.239 & 0.912 & 0.907 \\
+label\_propagation\_sage & 0.110 & 0.964 & 0.965 \\
+gat\_gat & 0.182 & 0.906 & 0.918 \\
+gat\_sage & \best{0.047} & 0.974 & 0.970 \\
+sage\_gat & 0.188 & 0.910 & 0.916 \\
+sage\_sage & 0.049 & 0.973 & 0.970 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

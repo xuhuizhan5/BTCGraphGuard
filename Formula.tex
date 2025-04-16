@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+
+% Set page size and margins
+\usepackage[a4paper,margin=0.2in]{geometry}
+
+% For math symbols and environments
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+
+% --- Title (Optional) ---
+\begin{center}
+    {\Large \textbf{Similarity and Distance Metrics}}\\[1em]
+\end{center}
+
+% --- Raw Similarity ---
+\[
+\text{Raw Similarity}(v_1, v_2) = 
+\begin{cases}
+    1.0 & \text{if } v_1 = 0 \text{ and } v_2 = 0,\\
+    0.0 & \text{if } v_1 = 0 \text{ or } v_2 = 0,\\
+    1 - \min\!\Bigl(\dfrac{|v_1 - v_2|}{\max(|v_1|, |v_2|)},\,1\Bigr) 
+    & \text{otherwise}.
+\end{cases}
+\]
+
+% --- Bootstrap Normalized Similarity ---
+\[
+\text{Bootstrap Normalized Similarity} =
+\begin{cases}
+    1.0 
+        & \text{if } \sigma_{\text{bootstrap}} = 0 \text{ and } |v_{\text{pred}} - v_{\text{train}}| = 0,\\[6pt]
+    0.0 
+        & \text{if } \sigma_{\text{bootstrap}} = 0 \text{ and } |v_{\text{pred}} - v_{\text{train}}| \neq 0,\\[6pt]
+    \max\!\Bigl(
+        0,\,
+        1 - \min\!\Bigl(\dfrac{|v_{\text{pred}} - v_{\text{train}}|}{\sigma_{\text{bootstrap}} \cdot 3},\,1\Bigr)
+    \Bigr)
+        & \text{otherwise}.
+\end{cases}
+\]
+
+\noindent
+where 
+\[
+v_{\text{pred}} \text{ is the predicted value},\quad
+v_{\text{train}} \text{ is the training value},\quad
+\sigma_{\text{bootstrap}} \text{ is the standard deviation from bootstrap samples}.
+\]
+
+% --- Distance from Ideal ---
+\[
+\text{Distance from Ideal} \;=\; \bigl|\text{Normalized Similarity} - 1.0\bigr|.
+\]
+
+% --- Combined Distance ---
+\[
+\text{Combined Distance} \;=\;
+\frac{\text{Distance from Ideal}_{\text{licit}} \;+\; \text{Distance from Ideal}_{\text{illicit}}}{2}.
+\]
+
+\end{document}
