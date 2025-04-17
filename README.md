@@ -8,32 +8,32 @@ BTCGraphGuard is a project focused on detecting illicit activities on the Bitcoi
 
 ### Features
 
-- Implementation of multiple GNN architectures:
-  - Graph Convolutional Networks (GCN)
-  - Graph Attention Networks (GAT)
-  - Temporal GNNs
-- Comprehensive Bitcoin transaction analysis
-- Classification of unlabeled transactions
-- Graph-level property analysis (degree distributions, clusters, centrality)
-- Similarity assessment between subgraphs predicted by different models
+* Implementation of multiple GNN architectures:
+* Graph Convolutional Networks (GCN)
+* Graph Attention Networks (GAT)
+* GraphSAGE
+* Comprehensive Bitcoin transaction analysis
+* Classification of unlabeled transactions
+* Graph-level property analysis (degree distributions, clusters, centrality)
+* Similarity assessment between subgraphs predicted by different models
 
 ### Dataset
 
 The project utilizes the Elliptic Data Set (https://www.kaggle.com/datasets/ellipticco/elliptic-data-set/data), which contains:
 
-- 203,769 nodes and 234,355 edges
-- 166 features per node (transactional and aggregated features)
-- Labels: Illicit (2%), Licit (21%), Unknown (77%)
+* 203,769 nodes and 234,355 edges
+* 166 features per node (transactional and aggregated features)
+* Labels: Illicit (2%), Licit (21%), Unknown (77%)
 
 ### Methodology
 
 Our approach consists of:
 
-1. Data preprocessing and exploration
-2. Training GNN models on labeled data
-3. Predicting labels for unknown transactions
-4. Analyzing graph-level properties
-5. Assessing similarities and differences among predicted subgraphs
+* Data preprocessing and exploration
+* Training GNN models on labeled data
+* Predicting labels for unknown transactions
+* Analyzing graph-level properties
+* Assessing similarities and differences among predicted subgraphs
 
 ### Installation
 
@@ -52,39 +52,29 @@ pip install -r requirements.txt
 
 ### Usage
 
-```bash
-# Run data preprocessing
-python src/preprocessing.py
+Our entire analysis pipeline is contained within a single Jupyter notebook:
 
-# Train the baseline GCN model
-python src/train_gcn.py
+# Launch Jupyter Notebook
 
-# Train the GAT model
-python src/train_gat.py
+jupyter notebook
 
-# Train the Temporal GNN model
-python src/train_temporal_gnn.py
+# Open the main notebook
 
-# Evaluate and compare models
-python src/evaluate_models.py
-```
+final_graph.ipynb
 
 ### Project Structure
 
 ```
 BTCGraphGuard/
-├── data/               # Dataset files
-├── notebooks/          # Jupyter notebooks for exploration and analysis
-├── src/                # Source code
-│   ├── models/         # GNN model implementations
-│   ├── preprocessing.py
-│   ├── train_gcn.py
-│   ├── train_gat.py
-│   ├── train_temporal_gnn.py
-│   └── evaluate_models.py
-├── results/            # Saved model outputs and visualizations
-├── requirements.txt    # Project dependencies
-└── README.md           # Project documentation
+├── data/                  # Dataset files
+│   └── elliptic_bitcoin_dataset/  # Original Elliptic dataset
+├── notebooks/             # Additional exploratory notebooks
+│   ├── experiment.ipynb
+│   └── experiment_with_eda.ipynb
+├── final_graph.ipynb      # Main analysis notebook
+├── output/                # Saved model outputs and visualizations
+├── requirements.txt       # Project dependencies
+└── README.md              # Project documentation
 ```
 
 ### Timeline
@@ -95,7 +85,7 @@ BTCGraphGuard/
 | **Mar 25 - Apr 1**             | Data preprocessing; implement baseline GCN                |
 | **Apr 1 (Project Update)**     | Preliminary results with GCN; basic dataset analysis      |
 | **Apr 2 - Apr 8**              | Implement Graph Attention Networks (GAT)                  |
-| **Apr 9 - Apr 14**             | Implement Temporal GNN; Initial comparisons               |
+| **Apr 9 - Apr 14**             | Implement GraphSAGE; Initial comparisons                  |
 | **Apr 15 & 17 (Presentation)** | Present methods and preliminary findings                  |
 | **Apr 16 - Apr 22**            | Predict unknown nodes; compare predicted subgraphs        |
 | **Apr 23 - Apr 25**            | Analyze graph similarity across methods; finalize results |
@@ -106,6 +96,10 @@ BTCGraphGuard/
 - Xuhui Zhan
 - Siyu Yang
 - Tianhao Qu
+
+### Acknowledgements
+
+We would like to thank Clem W for sharing their Bitcoin transaction graph processing code at [https://www.kaggle.com/code/clemwo/bitcoin-transactions-graph-neural-networks](https://www.kaggle.com/code/clemwo/bitcoin-transactions-graph-neural-networks), which significantly helped us with graph preprocessing steps in this project.
 
 ### License
 
