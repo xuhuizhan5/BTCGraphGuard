@@ -68,9 +68,9 @@ final_graph.ipynb
 BTCGraphGuard/
 ├── data/                  # Dataset files
 │   └── elliptic_bitcoin_dataset/  # Original Elliptic dataset
-├── notebooks/             # Additional exploratory notebooks
+├── notebooks/             # Old notebooks we used on the way to final
 │   ├── experiment.ipynb
-│   └── experiment_with_eda.ipynb
+│   └── experiment_with_eda.ipynb, etc.
 ├── final_graph.ipynb      # Main analysis notebook
 ├── output/                # Saved model outputs and visualizations
 ├── requirements.txt       # Project dependencies
