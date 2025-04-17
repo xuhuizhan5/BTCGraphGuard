@@ -54,13 +54,13 @@ pip install -r requirements.txt
 
 Our entire analysis pipeline is contained within a single Jupyter notebook:
 
-# Launch Jupyter Notebook
-
+```
+# Lauch Jupyter Notebook
 jupyter notebook
 
 # Open the main notebook
-
 final_graph.ipynb
+```
 
 ### Project Structure
 
